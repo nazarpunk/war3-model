@@ -7,3 +7,4 @@ node_modules
 !samples.webpack.config.js
 !third_party/decoder.js
 !docs/*/dist/*.js
+/.idea/
