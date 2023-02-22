@@ -61,17 +61,13 @@ function initGL() {
         gl = canvas.getContext('webgl2', opts) ||
             canvas.getContext('webgl', opts) ||
             canvas.getContext('experimental-webgl', opts) as
-            (WebGL2RenderingContext | WebGLRenderingContext);
+                 WebGL2RenderingContext | WebGLRenderingContext;
 
-        ddsExt = (
-            gl.getExtension('WEBGL_compressed_texture_s3tc') ||
+        ddsExt = gl.getExtension('WEBGL_compressed_texture_s3tc') ||
             gl.getExtension('MOZ_WEBGL_compressed_texture_s3tc') ||
-            gl.getExtension('WEBKIT_WEBGL_compressed_texture_s3tc')
-        );
+            gl.getExtension('WEBKIT_WEBGL_compressed_texture_s3tc');
 
-        rgtcExt = (
-            gl.getExtension('EXT_texture_compression_rgtc')
-        );
+        rgtcExt = gl.getExtension('EXT_texture_compression_rgtc');
 
         gl.clearColor(0.15, 0.15, 0.15, 1.0);
         gl.enable(gl.DEPTH_TEST);
