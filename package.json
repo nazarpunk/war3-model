@@ -29,7 +29,7 @@
     "build-lib": "rm -rf dist && rollup --config rollup.config.ts --configPlugin typescript",
     "build-lib-watch": "rm -rf dist && rollup --config rollup.config.ts --configPlugin typescript --watch",
     "build-samples": "rm -rf docs/convert/dist docs/decodeblp/dist docs/preview/dist docs/optframes/dist && webpack-cli --config samples.webpack.config.js",
-    "build-preview": "rm -rf docs/preview/dist1 && tsc -p docs/preview",
+    "build-preview": "rm -rf docs/preview/dist && tsc -p docs/preview",
     "build-samples-watch": "rm -rf docs/convert/dist docs/decodeblp/dist docs/preview/dist docs/optframes/dist && webpack-cli --config samples.webpack.config.js --watch",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --ext .ts ."
